@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>🐍 Snake Battle Multiplayer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🐍 Snake Battle Multiplayer</h1>
+    <div id="menu">
+      <input id="playerName" type="text" placeholder="ใส่ชื่อของคุณ..." />
+      <button id="startBtn">เริ่มเล่น</button>
+    </div>
+
+    <div id="lobby" style="display:none;">
+      <h2>รอผู้เล่นอีกคน...</h2>
+      <p id="playerList"></p>
+    </div>
+
+    <canvas id="game" width="400" height="400" style="display:none;"></canvas>
+
+    <div id="skills" style="display:none;">
+      <button data-skill="speedUp">⚡ เร่งตัวเอง</button>
+      <button data-skill="slowEnemy">🐢 ทำให้ศัตรูช้า</button>
+      <button data-skill="reduceEnemy">🎯 ลดความยาวศัตรู</button>
+    </div>
+
+    <div id="restart" style="display:none;">
+      <button id="restartBtn">เล่นอีกครั้ง</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
